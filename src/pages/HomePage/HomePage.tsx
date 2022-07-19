@@ -1,13 +1,16 @@
 import React from 'react';
-import { styles } from './HomePageStyles';
+import * as Styled from './HomePageStyles';
 import { FolhaA4 } from '../../components/FolhaA4/A4';
+import Menu from '../../components/Menu/Menu';
 
-export default function HomePage() {
+function HomePage() {
     return (
-        <div style={styles.container}>
-            <div style={styles.box}>
+        <Styled.Container>
+            <Menu />
+            <Styled.Box>
                 <FolhaA4></FolhaA4>
-            </div>
-        </div>
+            </Styled.Box>
+        </Styled.Container>
     );
 }
+export default HomePage;

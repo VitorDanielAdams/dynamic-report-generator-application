@@ -1,7 +1,7 @@
-import { styles } from './styles';
+import { Container } from './A4Styles';
 
 export const FolhaA4 = () => {
     return (
-        <div style={styles.container}></div>
+        <Container></Container>
     );
 }
