@@ -1,7 +1,8 @@
 import { Container } from './A4Styles';
 
-export const FolhaA4 = () => {
+const FolhaA4 = () => {
     return (
         <Container></Container>
     );
 }
+export default FolhaA4;

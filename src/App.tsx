@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { RouterConfig } from './navigation/RouterConfig';
-import './styles/styles.css'
+import RouterConfig from './navigation/RouterConfig';
+import './assets/styles/styles.css'
 
 function App() {
   return (
