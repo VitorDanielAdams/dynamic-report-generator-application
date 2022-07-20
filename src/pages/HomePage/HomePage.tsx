@@ -1,4 +1,3 @@
-import React from 'react';
 import * as Styled from './HomePageStyles';
 import FolhaA4 from '../../components/FolhaA4/A4';
 import Menu from '../../components/Menu/Menu';

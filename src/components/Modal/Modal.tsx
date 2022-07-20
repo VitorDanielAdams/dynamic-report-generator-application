@@ -1,7 +1,7 @@
 import * as Styled from './ModalStyles';
 import IconGraphic from '../../assets/images/IconGraphic.svg';
 import IconImage from '../../assets/images/IconImage.svg';
-import { Dispatch, SetStateAction, useCallback, useEffect, useRef } from "react";
+import { Dispatch, SetStateAction } from "react";
 
 interface ModalProps {
     openModal: boolean,
@@ -20,6 +20,9 @@ const Modal = ({openModal, setShowModal}:ModalProps) => {
                 <Styled.Background onClick={closeModal}>
                     <Styled.ModalWrapper>
                         <Styled.ModalContent>
+                            <Styled.ButtonCloseDiv>
+                                <Styled.ButtonClose>X</Styled.ButtonClose>
+                            </Styled.ButtonCloseDiv>
                             <Styled.Title>Selecione o Modelo:</Styled.Title>
                             <Styled.ButtonsDiv>
                                 <Styled.Button>
