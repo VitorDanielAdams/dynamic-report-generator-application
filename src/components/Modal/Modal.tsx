@@ -1,40 +1,31 @@
 import * as Styled from './ModalStyles';
-import IconGraphic from '../../assets/images/IconGraphic.svg';
-import IconImage from '../../assets/images/IconImage.svg';
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
+import ConditionalRenderModal from './components/ConditionalRenderModal';
 
 interface ModalProps {
-    openModal: boolean,
-    setShowModal:  Dispatch<SetStateAction<boolean>>
+
+    openModal: boolean;
+    setShowModal:  Dispatch<SetStateAction<boolean>>;
 }
 
 const Modal = ({openModal, setShowModal}:ModalProps) => {
     
-    const closeModal = (e: any) => {
+    const [menuModal, setMenuModal] = useState(true);
+
+    const closeModal = () => {
+        setMenuModal(true)
         setShowModal(false);
     };
 
     return(
         <>
             { openModal ? (
-                <Styled.Background onClick={closeModal}>
+                <Styled.Background>
                     <Styled.ModalWrapper>
-                        <Styled.ModalContent>
-                            <Styled.ButtonCloseDiv>
-                                <Styled.ButtonClose>X</Styled.ButtonClose>
-                            </Styled.ButtonCloseDiv>
-                            <Styled.Title>Selecione o Modelo:</Styled.Title>
-                            <Styled.ButtonsDiv>
-                                <Styled.Button>
-                                    <Styled.Subtitle>Grafico</Styled.Subtitle>
-                                    <Styled.Icon src={IconGraphic} />
-                                </Styled.Button>
-                                <Styled.Button >
-                                    <Styled.Subtitle>Imagem</Styled.Subtitle>
-                                    <Styled.Icon src={IconImage} />
-                                </Styled.Button>
-                            </Styled.ButtonsDiv>
-                        </Styled.ModalContent>
+                        <ConditionalRenderModal menuModal={menuModal} setMenuModal={setMenuModal}/>
+                        <Styled.ButtonCloseDiv>
+                            <Styled.ButtonClose onClick={closeModal}>X</Styled.ButtonClose>
+                        </Styled.ButtonCloseDiv>
                     </Styled.ModalWrapper>
                 </Styled.Background>
             ) : <></>}
