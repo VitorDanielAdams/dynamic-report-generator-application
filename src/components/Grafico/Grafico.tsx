@@ -1,7 +1,7 @@
-import ReactECharts from 'echarts-for-react'; 
+import * as Styled from './GraficoStyles';
 
 interface GraficoProps {
-    tipo: string;
+    tipo?: string;
 }
 
 const Grafico = ({tipo}:GraficoProps) => {
@@ -80,11 +80,12 @@ const Grafico = ({tipo}:GraficoProps) => {
     };
 
     return (
-        <ReactECharts
+        <Styled.ECharts
             option={tipo === 'bar' ? bar : pie}
             notMerge={true}
             lazyUpdate={false}
             theme={"theme_name"}
+            style={{height: "100%"}}
         /> 
     );
 }

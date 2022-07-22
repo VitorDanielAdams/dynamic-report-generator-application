@@ -1,6 +1,6 @@
+import * as Styled from './MenuStyles';
 import { useState } from 'react';
 import Modal from '../Modal/Modal';
-import * as Styled from './MenuStyles';
 
 function Menu() {
     const [showModal, setShowModal] = useState(false);
