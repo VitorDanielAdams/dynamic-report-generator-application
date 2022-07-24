@@ -2,9 +2,11 @@ import * as Styled from './GraficoStyles';
 
 interface GraficoProps {
     tipo?: string;
+    width: string;
+    height: string;
 }
 
-const Grafico = ({tipo}:GraficoProps) => {
+const Grafico = ({tipo,width,height}:GraficoProps) => {
 
     const bar = {
         tooltip: {
@@ -85,7 +87,8 @@ const Grafico = ({tipo}:GraficoProps) => {
             notMerge={true}
             lazyUpdate={false}
             theme={"theme_name"}
-            style={{height: "100%"}}
+            width={width}
+            height={height}
         /> 
     );
 }

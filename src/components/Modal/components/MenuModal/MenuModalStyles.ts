@@ -51,6 +51,10 @@ export const Subtitle = styled.h2`
 `;
 
 export const Icon = styled.img`
-    width: 6rem;
-    height: 6rem;
+    width: 4rem;
+    height: 4rem;
+    @media only screen and (min-width: 768px) {
+        width: 6rem;
+        height: 6rem;
+    }
 `;

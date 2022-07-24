@@ -13,4 +13,8 @@ export const Box = styled.div`
     justify-content: center;
     align-items: center;
     padding: 20px;
+    margin: 150px 0 0 0;
+    @media only screen and (min-width: 992px) {
+        margin: 0 0 0 25%;
+    }
 `;

@@ -7,7 +7,10 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
+    @media only screen and (min-width: 768px) {
+        gap: 30px;
+    }
 `;
 
 export const Title = styled.h1`
@@ -18,11 +21,14 @@ export const Title = styled.h1`
 `;
 
 export const FormDiv = styled.div`
-    width: 90%;
+    width: 100%;
     height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media only screen and (min-width: 768px) {
+        width: 90%;
+    }
 `;
 
 export const FormColumnDiv = styled.div`
@@ -40,7 +46,7 @@ export const FieldDiv = styled.div`
 `;
 
 export const CheckBox = styled.label`
-    width: 40%;
+    width: 100%;
     height: 1.8rem;
     display: flex;
     align-items: center;
@@ -54,6 +60,9 @@ export const CheckBox = styled.label`
     font-weight: 600;
     font-family: Arial;
     color: #FFFFFF;
+    @media only screen and (min-width: 768px) {
+        width: 40%;
+    }
 `;
 
 export const CheckBoxInput = styled.input.attrs({ type: "checkbox" })`
@@ -170,15 +179,18 @@ export const Divider = styled.div`
 
 
 export const ButtonsDiv = styled.div`
-    width: 90%;
+    width: 100%;
     height: 5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media only screen and (min-width: 768px) {
+        width: 90%;
+    }
 `;
 
 export const Button = styled("button")<{primary?: boolean}>`
-    width: 15rem;
+    width: 10rem;
     height: 2rem;
     background: ${props => props.primary ? "#1D70C3" : "#7C7C7C"};
     border: none;
@@ -193,21 +205,31 @@ export const Button = styled("button")<{primary?: boolean}>`
         background: ${props => props.primary ? "#144D85" : "#4D5456"};
         box-shadow: 2px 2px 3px 1px rgba(1,1,1,0.5);
     }
+    @media only screen and (min-width: 768px) {
+        width: 15rem;
+    }
 `;
 
 export const Error = styled.span`
     position: absolute;
-    bottom: -4px;
+    bottom: -3px;
     left: 5px;
-    font-size: 10px;
+    font-size: 7px;
     font-weight: 600;
     font-family: Arial;
     color: red;
+    @media only screen and (min-width: 768px) {
+        font-size: 10px;
+        bottom: -4px;
+    }
 `;
 
 export const ErrorDiv = styled.div`
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 300;
     font-family: Arial;
     color: red;
+    @media only screen and (min-width: 768px) {
+        font-size: 15px;
+    }
 `;

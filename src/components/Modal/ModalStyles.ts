@@ -12,8 +12,8 @@ export const Background = styled.div`
 `;
 
 export const ModalWrapper = styled.div`
-    width: 43rem;
-    height: 28rem;
+    width: 80%;
+    height: 30rem;
     position: relative;
     border-radius: 5px;
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
@@ -23,6 +23,10 @@ export const ModalWrapper = styled.div`
     justify-content: center;
     align-items: center;
     padding: 50px;
+    @media only screen and (min-width: 768px) {
+        width: 43rem;
+        height: 28rem;
+    }
 `;
 
 export const ButtonCloseDiv = styled.div`

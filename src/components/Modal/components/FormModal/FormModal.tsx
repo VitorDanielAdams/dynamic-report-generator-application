@@ -62,6 +62,9 @@ const FormModal = ({setShowModal,menuModal,selectedForm,setMenuModal}:FormModalP
     });
     const [imageName, setImageName] = useState<string | null>("");
     const { addToList } = useContext(FormModalContext);
+    const larguraTela = window.screen.width;
+    const maxWidth = larguraTela <= 992 ? 600 : 700;
+    const minWidth = larguraTela <= 992 ? 100 : 200;
 
     const goBack = () => {
         setMenuModal(!menuModal);
@@ -106,10 +109,10 @@ const FormModal = ({setShowModal,menuModal,selectedForm,setMenuModal}:FormModalP
                     'É necessário um titulo'});
                 break;
             case 'width':
-                var width = value.length > 0 && ~~value <= 700 && ~~value >= 200;
+                var width = value.length > 0 && ~~value <= maxWidth && ~~value >= minWidth;
                 setError({...error, [name]: width});
                 setErrorMessage({...errorMessage, [name]: width ? '' : 
-                    'É necesário uma largura(min:200|max:700)'});
+                    'É necesário uma largura(min:'+minWidth+'|max:'+maxWidth+')'});
                 break;
             case 'height':
                 var height = value.length > 0 && ~~value <= 800 && ~~value >= 200;

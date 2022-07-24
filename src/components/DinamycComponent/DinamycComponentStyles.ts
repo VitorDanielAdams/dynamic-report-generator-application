@@ -1,15 +1,24 @@
 import styled, { css } from 'styled-components';
 
+function calculateResposive(value: string){
+    return  ~~value * 80 / 100;
+}
+
 export const Container = styled("div")<{ width:string, height:string, border:boolean, borderWidth?:string }>`
-    width: ${props => props.width}px;
-    height: ${props => props.height}px;
+    width: ${props => calculateResposive(props.width)}px;
+    height: ${props => calculateResposive(props.height)}px;
     border: ${props => props.border ? props.borderWidth+"px solid #000000" : "none"};
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2px;
     padding: 10px;
     cursor: pointer;
+    @media only screen and (min-width: 768px) {
+        width: ${props => props.width}px;
+        height: ${props => props.height}px;
+    }
 `
 
 export const Title = styled.h1`
