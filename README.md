@@ -3,13 +3,18 @@
 Desenvolver uma aplicação web que simule um relatório dinâmico, onde o 
 usuário consiga adicionar componentes e organizá-los para impressão.
 
-## Instalação
+# Setup
+
+1. Clonar o repositório
+2. Entrar na pasta
+
+## 3.Instalação
 
 ```bash
 $ npm install
 ```
 
-## Rodar o App
+## 4.Rodar o App
 
 ```bash
 # Para rodar localmente
