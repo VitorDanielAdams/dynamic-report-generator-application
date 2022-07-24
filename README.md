@@ -5,9 +5,9 @@ usuário consiga adicionar componentes e organizá-los para impressão.
 
 # Setup
 
-## 1. Clonar o repositório
+1. Clonar o repositório
 
-## 2. Entrar na pasta
+2. Entrar na pasta
 
 ## 3. Instalação
 
