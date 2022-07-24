@@ -1,21 +1,24 @@
 # Desafio técnico Intelltech
 
-## Installation
+Desenvolver uma aplicação web que simule um relatório dinâmico, onde o 
+usuário consiga adicionar componentes e organizá-los para impressão.
+
+## Instalação
 
 ```bash
 $ npm install
 ```
 
-## Running the app
+## Rodar o App
 
 ```bash
-# development
+# Para rodar localmente
 $ npm start
 
 or 
 
 $ npm run dev
 
-# production mode
+# Para rodar no modo de produção
 $ npm run build
 ```
