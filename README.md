@@ -5,16 +5,17 @@ usuário consiga adicionar componentes e organizá-los para impressão.
 
 # Setup
 
-1. Clonar o repositório
-2. Entrar na pasta
+##1. Clonar o repositório
 
-## 3.Instalação
+##2. Entrar na pasta
+
+## 3. Instalação
 
 ```bash
 $ npm install
 ```
 
-## 4.Rodar o App
+## 4. Rodar o App
 
 ```bash
 # Para rodar localmente
