@@ -3,7 +3,6 @@ import { Dispatch, SetStateAction, useState } from "react";
 import ConditionalRenderModal from './components/ConditionalRenderModal';
 
 interface ModalProps {
-
     openModal: boolean;
     setShowModal:  Dispatch<SetStateAction<boolean>>;
 }
@@ -22,7 +21,7 @@ const Modal = ({openModal, setShowModal}:ModalProps) => {
             { openModal ? (
                 <Styled.Background>
                     <Styled.ModalWrapper>
-                        <ConditionalRenderModal menuModal={menuModal} setMenuModal={setMenuModal}/>
+                        <ConditionalRenderModal setShowModal={setShowModal} menuModal={menuModal} setMenuModal={setMenuModal}/>
                         <Styled.ButtonCloseDiv>
                             <Styled.ButtonClose onClick={closeModal}>X</Styled.ButtonClose>
                         </Styled.ButtonCloseDiv>

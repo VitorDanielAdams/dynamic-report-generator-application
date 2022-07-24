@@ -1,15 +1,19 @@
 import * as Styled from './HomePageStyles';
 import FolhaA4 from '../../components/FolhaA4/A4';
 import Menu from '../../components/Menu/Menu';
-import Grafico from '../../components/Grafico/Grafico';
-import DinamycComponent from '../../components/DinamycComponent/DinamycComponent';
+import { useRef } from 'react';
+import { useReactToPrint } from 'react-to-print';
 
 function HomePage() {
+    const componentRef = useRef(null);
+    const handlePrint = useReactToPrint({
+        content: () => componentRef.current,
+    });
     return (
         <Styled.Container>
-            <Menu />
+            <Menu download={handlePrint} />
             <Styled.Box>
-                <FolhaA4></FolhaA4>
+                <FolhaA4 ref={componentRef}></FolhaA4>
             </Styled.Box>
         </Styled.Container>
     );

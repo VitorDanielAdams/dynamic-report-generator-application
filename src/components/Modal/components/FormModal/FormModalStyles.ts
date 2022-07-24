@@ -1,9 +1,5 @@
 import styled, { css } from 'styled-components';
 
-interface LabelProps {
-    disabled?: boolean;
-}
-
 export const Container = styled.div`
     width: 100%;
     height: 100%;
@@ -11,7 +7,7 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
 `;
 
 export const Title = styled.h1`
@@ -68,7 +64,7 @@ export const CheckBoxInput = styled.input.attrs({ type: "checkbox" })`
     border-radius: 2px;
 `;
 
-export const Label = styled.label<LabelProps>`
+export const Label = styled("label")<{disabled?: boolean, error?: boolean}>`
     width: 6rem;
     height: 60%;
     display: flex;
@@ -83,6 +79,11 @@ export const Label = styled.label<LabelProps>`
     transition: 0.3s linear;
     ${({disabled}) =>
         !disabled && css`
+            background: #DFE1E2;
+            border: solid 1px #DFE1E2;
+        `}
+    ${({error}) =>
+        error && css`
             background: red;
             border: solid 1px red;
         `}
@@ -100,7 +101,7 @@ export const Input = styled.input`
         border: solid 1px #4884A4;
     }
     &:disabled {
-        border: solid 1px red; 
+        border: solid 1px #DFE1E2; 
     }
 `;
 
@@ -192,4 +193,21 @@ export const Button = styled("button")<{primary?: boolean}>`
         background: ${props => props.primary ? "#144D85" : "#4D5456"};
         box-shadow: 2px 2px 3px 1px rgba(1,1,1,0.5);
     }
+`;
+
+export const Error = styled.span`
+    position: absolute;
+    bottom: -4px;
+    left: 5px;
+    font-size: 10px;
+    font-weight: 600;
+    font-family: Arial;
+    color: red;
+`;
+
+export const ErrorDiv = styled.div`
+    font-size: 15px;
+    font-weight: 300;
+    font-family: Arial;
+    color: red;
 `;

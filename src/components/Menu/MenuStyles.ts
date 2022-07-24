@@ -1,24 +1,46 @@
 import styled from 'styled-components';
 
 export const Menu = styled.div`
-    width: 25%;
-    height: auto;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
     gap: 25px 0;
     background-color: #25262D;
     color: #FFFFFF;
     border-radius: 0 7px 7px 0;
+    padding: 0 20px;
+    @media only screen and (min-width: 992px) {
+        width: 25%;
+        height: auto;
+        z-index: 0;
+        position: static;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        
+    } 
 `;
 
 export const TitleDiv = styled.div`
-    width: 100%;
+    width: 20%;
     height: 5rem;
     display: flex;
-    justify-dontent: flex-start;
+    justify-content: center;
     align-items: center;
-    padding: 0 2rem;
-    border-bottom: 1px solid #FFFFFF;
+    border: none;
+    @media only screen and (min-width: 992px) {
+        width: 100%;
+        height: 5rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 2rem;
+        border-bottom: 1px solid #FFFFFF;
+    }
 `;
 
 export const Title = styled.h2`
@@ -28,16 +50,24 @@ export const Title = styled.h2`
 `;
 
 export const ButtonsDiv = styled.div`
-    width: 100%;
+    width: 40%;
     height: 8rem;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    @media only screen and (min-width: 992px) {
+        width: 100%;
+        height: 8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
 `;
 
 export const Button = styled.button`
-    width: 80%;
+    width: 40%;
     background: #FFFFFF;
     outline: none;
     border: none;
@@ -52,5 +82,8 @@ export const Button = styled.button`
         background: #1E1F27;
         color: white;
         box-shadow: 2px 1px 5px 1px rgba(221,226,228,0.3);
+    }
+    @media only screen and (min-width: 992px) {
+        width: 80%;
     }
 `;

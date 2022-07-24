@@ -1,10 +1,28 @@
+import { forwardRef, useContext } from 'react';
+import DinamycComponent from '../DinamycComponent/DinamycComponent';
+import FormModalContext from '../Modal/components/FormModal/FormModalProvider';
 import { Container } from './A4Styles';
 
-const FolhaA4 = ({children}: any) => {
+const FolhaA4 = forwardRef((props:any,ref:any) => {
+
+    const { list } = useContext(FormModalContext);
+
     return (
-        <Container>
-            {children}
+        <Container ref={ref}>
+            {list?.map((item, index) => (
+                <DinamycComponent 
+                    index={index}
+                    title={item.title}
+                    width={item.width}
+                    height={item.height}
+                    border={item.border}
+                    borderWidth={item.borderWidth}
+                    image={item.image}
+                    graphic={item.graphic}
+                    key={index}
+                />
+            ))}
         </Container>
     );
-}
+})
 export default FolhaA4;

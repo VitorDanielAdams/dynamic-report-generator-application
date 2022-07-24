@@ -15,7 +15,7 @@ const UploadImage = ({onChange,onClick,nameFile}:UploadImageProps) => {
                 <Styled.Input 
                     id="image"
                     type="file" 
-                    name="imagem"
+                    name="image"
                     accept="image/*"
                     multiple={false}
                     onChange={onChange}
