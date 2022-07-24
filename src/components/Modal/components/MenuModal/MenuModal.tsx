@@ -1,8 +1,8 @@
 import * as Styled from './MenuModalStyles';
-import IconGraphic from '../../../../assets/images/IconGraphic.svg';
-import IconImage from '../../../../assets/images/IconImage.svg';
 import { FormEnum } from '../../utils/FormEnum';
 import { Dispatch, SetStateAction } from 'react';
+import IconGraphic from '../../../../assets/images/IconGraphic.svg';
+import IconImage from '../../../../assets/images/IconImage.svg';
 
 interface MenuModalProps {
     setMenuModal: Dispatch<SetStateAction<boolean>>;
@@ -18,7 +18,7 @@ const MenuModal = ({setMenuModal, setSelectedForm}:MenuModalProps) => {
     };
 
     return (
-        <Styled.ModalContent>
+        <Styled.Content>
             <Styled.Title>Selecione o Modelo:</Styled.Title>
             <Styled.ButtonsDiv>
                 <Styled.Button onClick={changeRender} name={FormEnum.grafico}>
@@ -30,7 +30,7 @@ const MenuModal = ({setMenuModal, setSelectedForm}:MenuModalProps) => {
                     <Styled.Icon src={IconImage} />
                 </Styled.Button>
             </Styled.ButtonsDiv>
-        </Styled.ModalContent>
+        </Styled.Content>
     );
 }
 export default MenuModal;

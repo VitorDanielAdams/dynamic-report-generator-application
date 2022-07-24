@@ -3,24 +3,25 @@ import { useState } from 'react';
 import Modal from '../Modal/Modal';
 
 interface MenuProps {
-    download: () => void;
+    print: () => void;
 }
 
-const Menu = ({download}:MenuProps) => {
+const Menu = ({print}:MenuProps) => {
+    
     const [showModal, setShowModal] = useState(false);
     
     return (
         <>
             <Modal openModal={showModal} setShowModal={setShowModal} />
-            <Styled.Menu>
+            <Styled.Container>
                 <Styled.TitleDiv>
                     <Styled.Title>Menu</Styled.Title>
                 </Styled.TitleDiv>
                 <Styled.ButtonsDiv>
                     <Styled.Button onClick={() => setShowModal(true) }>Adicionar</Styled.Button>
-                    <Styled.Button onClick={download}>Imprimir</Styled.Button>
+                    <Styled.Button onClick={print}>Imprimir</Styled.Button>
                 </Styled.ButtonsDiv>
-            </Styled.Menu>
+            </Styled.Container>
         </>
     );
 }

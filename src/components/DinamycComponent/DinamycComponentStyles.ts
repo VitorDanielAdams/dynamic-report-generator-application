@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 function calculateResposive(value: string){
     return  ~~value * 80 / 100;
@@ -28,7 +28,7 @@ export const Title = styled.h1`
     color: #000000;
 `;
 
-export const ContentDiv = styled.div`
+export const Content = styled.div`
     width: 100%;
     height: 90%;
     display: flex;

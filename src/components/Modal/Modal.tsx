@@ -21,7 +21,11 @@ const Modal = ({openModal, setShowModal}:ModalProps) => {
             { openModal ? (
                 <Styled.Background>
                     <Styled.ModalWrapper>
-                        <ConditionalRenderModal setShowModal={setShowModal} menuModal={menuModal} setMenuModal={setMenuModal}/>
+                        <ConditionalRenderModal 
+                            setShowModal={setShowModal} 
+                            menuModal={menuModal} 
+                            setMenuModal={setMenuModal}
+                        />
                         <Styled.ButtonCloseDiv>
                             <Styled.ButtonClose onClick={closeModal}>X</Styled.ButtonClose>
                         </Styled.ButtonCloseDiv>

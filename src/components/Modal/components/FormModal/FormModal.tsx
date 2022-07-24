@@ -21,7 +21,7 @@ export interface ComponentObject {
     graphic: string;
 }
 
-export interface ErrorObject {
+interface ErrorObject {
     title: boolean;
     width: boolean;
     height: boolean;
@@ -29,6 +29,16 @@ export interface ErrorObject {
     image: boolean;
     graphic: boolean;
     form: boolean;
+}
+
+interface ErrorMessageObject {
+    title: string;
+    width: string;
+    height: string;
+    borderWidth: string;
+    image: string;
+    graphic: string;
+    form: string;
 }
 
 const FormModal = ({setShowModal,menuModal,selectedForm,setMenuModal}:FormModalProps) => {
@@ -42,7 +52,8 @@ const FormModal = ({setShowModal,menuModal,selectedForm,setMenuModal}:FormModalP
         graphic: selectedForm === FormEnum.grafico ? false : true,
         form: false
     });
-    const [errorMessage, setErrorMessage] = useState({
+
+    const [errorMessage, setErrorMessage] = useState<ErrorMessageObject>({
         title: "",
         width: "",
         height: "",
@@ -51,6 +62,7 @@ const FormModal = ({setShowModal,menuModal,selectedForm,setMenuModal}:FormModalP
         graphic: "",
         form: ""
     });
+
     const [componentObject, setComponentObject] = useState<ComponentObject>({
         title: "",
         width: "",
@@ -60,6 +72,7 @@ const FormModal = ({setShowModal,menuModal,selectedForm,setMenuModal}:FormModalP
         image: "",
         graphic: ""
     });
+
     const [imageName, setImageName] = useState<string | null>("");
     const { addToList } = useContext(FormModalContext);
     const larguraTela = window.screen.width;
@@ -82,18 +95,6 @@ const FormModal = ({setShowModal,menuModal,selectedForm,setMenuModal}:FormModalP
         setComponentObject({...componentObject, image: ""});
         setImageName(null);
     };
-
-    const handleSubmit = () => {
-        if(error.form) {
-            setErrorMessage({...errorMessage, form: ''});
-            setMenuModal(true);
-            setShowModal(false);
-            addToList(componentObject);
-        } else {
-            setErrorMessage({...errorMessage, form: 
-                'Os inputs tem que ser preenchidos corretamente'});
-        }
-    }
 
     const handleInputChange = function (e: React.ChangeEvent<HTMLInputElement>) {
         validateInput(e.target.name, e.target.value);
@@ -133,6 +134,18 @@ const FormModal = ({setShowModal,menuModal,selectedForm,setMenuModal}:FormModalP
                     'É necessário selecionar um tipo de gráfico'});
                 break;
         }    
+    }
+
+    const handleSubmit = () => {
+        if(error.form) {
+            setErrorMessage({...errorMessage, form: ''});
+            setMenuModal(true);
+            setShowModal(false);
+            addToList(componentObject);
+        } else {
+            setErrorMessage({...errorMessage, form: 
+                'Os inputs tem que ser preenchidos corretamente'});
+        }
     }
 
     useEffect(() => {

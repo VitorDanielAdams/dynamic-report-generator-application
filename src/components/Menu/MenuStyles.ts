@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Menu = styled.div`
+export const Container = styled.div`
     width: 100%;
     z-index: 1;
     position: fixed;

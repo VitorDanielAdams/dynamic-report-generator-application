@@ -3,12 +3,12 @@ import FormModal from './FormModal/FormModal';
 import MenuModal from './MenuModal/MenuModal';
 
 interface ConditionalRenderModalProps {
-    setShowModal: Dispatch<SetStateAction<boolean>>;
     menuModal: boolean;
+    setShowModal: Dispatch<SetStateAction<boolean>>;
     setMenuModal:  Dispatch<SetStateAction<boolean>>;
 }
 
-function ConditionalRenderModal({setShowModal,menuModal,setMenuModal}:ConditionalRenderModalProps) {
+function ConditionalRenderModal({menuModal,setShowModal,setMenuModal}:ConditionalRenderModalProps) {
     
     const [selectedForm, setSelectedForm] = useState('');
 
@@ -20,6 +20,7 @@ function ConditionalRenderModal({setShowModal,menuModal,setMenuModal}:Conditiona
             />
         );
     } 
+    
     return (
         <FormModal 
             setShowModal={setShowModal} 

@@ -1,7 +1,7 @@
 import * as Styled from './DinamycComponentStyles';
+import { useContext, useState } from 'react';
 import Grafico from '../Grafico/Grafico';
 import Draggable from 'react-draggable';
-import { useContext, useState } from 'react';
 import FormModalContext from '../Modal/components/FormModal/FormModalProvider';
 
 interface DinamycComponentProps {
@@ -58,9 +58,9 @@ const DinamycComponent = ({
                     </Styled.Button>
                 </Styled.ButtonCloseDiv>
                 <Styled.Title>{title}</Styled.Title>
-                <Styled.ContentDiv>
+                <Styled.Content>
                     { image ? <Styled.Image src={image}/> : <Grafico width={width} height={height} tipo={graphic} />}
-                </Styled.ContentDiv>
+                </Styled.Content>
             </Styled.Container>
         </Draggable>
     );

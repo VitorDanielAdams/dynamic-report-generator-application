@@ -1,5 +1,5 @@
 import * as Styled from './UploadImageStyles';
-import { ChangeEvent, MouseEvent, useState } from 'react';
+import { ChangeEvent, MouseEvent } from 'react';
 
 interface UploadImageProps {
     onChange: (e: ChangeEvent<HTMLInputElement>) => void;
@@ -10,7 +10,7 @@ interface UploadImageProps {
 const UploadImage = ({onChange,onClick,nameFile}:UploadImageProps) => {
     
     return (
-        <Styled.UploadDiv>
+        <Styled.Container>
             <Styled.Label htmlFor="image">
                 <Styled.Input 
                     id="image"
@@ -23,7 +23,7 @@ const UploadImage = ({onChange,onClick,nameFile}:UploadImageProps) => {
                 Imagem
             </Styled.Label>
             <Styled.Text onClick={onClick}>{nameFile}</Styled.Text>
-        </Styled.UploadDiv>
+        </Styled.Container>
     );
 }
 export default UploadImage;
