@@ -8,13 +8,13 @@ usuário consiga adicionar componentes e organizá-los para impressão.
 ## 1. Clonar o Rrepositório
 
 ```bash
-git clone https://github.com/VitorDanielAdams/dynamic-report-generator-application.git
+$ git clone https://github.com/VitorDanielAdams/dynamic-report-generator-application.git
 ```
 
 ## 2. Entrar na Pasta
 
 ```bash
-cd dynamic-report-generator-application
+$ cd dynamic-report-generator-application
 ```
 ## 3. Instar os Pacotes
 
@@ -34,4 +34,11 @@ $ npm run dev
 
 # Para rodar no modo de produção
 $ npm run build
+```
+
+## 5. Abrir a Aplicação
+
+```bash
+# No navegador acesse o link
+localhost:3000
 ```
