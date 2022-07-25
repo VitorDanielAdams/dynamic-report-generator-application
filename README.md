@@ -5,18 +5,18 @@ usuário consiga adicionar componentes e organizá-los para impressão.
 
 # Setup
 
-## 1. Clonar o repositório
+## 1. Clonar o Rrepositório
 
 ```bash
 git clone https://github.com/VitorDanielAdams/dynamic-report-generator-application.git
 ```
 
-## 2. Entrar na pasta
+## 2. Entrar na Pasta
 
 ```bash
 cd dynamic-report-generator-application
 ```
-## 3. Instalação
+## 3. Instar os Pacotes
 
 ```bash
 $ npm install
