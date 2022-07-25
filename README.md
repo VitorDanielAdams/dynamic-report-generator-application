@@ -40,5 +40,6 @@ $ npm run build
 
 ```bash
 # No navegador acesse o link
-localhost:3000
+
+http://localhost:3000
 ```
